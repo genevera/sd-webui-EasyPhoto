@@ -344,8 +344,7 @@ def refresh_model_vae():
     list_models()
     refresh_vae_list()
     try:
-        from scripts import global_state
-
+        from scripts.controlnet import global_state
         global_state.update_cn_models()
     except Exception as e:
         ep_logger.error(f"Controlnet Refresh Error. Error info:{e}")
